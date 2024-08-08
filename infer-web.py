@@ -45,10 +45,8 @@ logger = logging.getLogger(__name__)
 
 tmp = os.path.join(now_dir, "TEMP")
 shutil.rmtree(tmp, ignore_errors=True)
-shutil.rmtree("%s/runtime/Lib/site-packages/infer_pack" %
-              (now_dir), ignore_errors=True)
-shutil.rmtree("%s/runtime/Lib/site-packages/uvr5_pack" %
-              (now_dir), ignore_errors=True)
+shutil.rmtree("%s/runtime/Lib/site-packages/infer_pack" % (now_dir), ignore_errors=True)
+shutil.rmtree("%s/runtime/Lib/site-packages/uvr5_pack" % (now_dir), ignore_errors=True)
 os.makedirs(tmp, exist_ok=True)
 os.makedirs(os.path.join(now_dir, "logs"), exist_ok=True)
 os.makedirs(os.path.join(now_dir, "assets/weights"), exist_ok=True)
@@ -466,23 +464,24 @@ def change_f0(if_f0_3, sr2, version19):  # f0method8,pretrained_G14,pretrained_D
         *get_pretrained_models(path_str, "f0" if if_f0_3 == True else "", sr2),
     )
 
+
 def merge_video(s1, s2, dir):
     cmd = (
-        'ffmpeg -i %s -i %s -filter_complex amix=inputs=2:duration=longest -acodec pcm_s16le output.wav' % (s1, s2)
+        "ffmpeg -i %s -i %s -filter_complex amix=inputs=2:duration=longest -acodec pcm_s16le output.wav"
+        % (s1, s2)
     )
     logger.info("Execute: " + cmd)
     p = Popen(cmd, shell=True, cwd="opt/" + dir)
     p.wait()
     return {"path": "/ftp/" + dir + "/output.wav"}
-    
+
+
 def download_video(url: str):
     dir = str(uuid.uuid4())
-    ytcmd = '/root/miniconda3/bin/yt-dlp'
-    vname = 'vname'
+    ytcmd = "/root/miniconda3/bin/yt-dlp"
+    vname = "vname"
     # create dir.
-    cmd = (
-        'mkdir %s' % (dir)
-    )
+    cmd = "mkdir %s" % (dir)
     logger.info("Execute: " + cmd)
     p = Popen(cmd, shell=True, cwd="/root/data")
     p.wait()
@@ -491,25 +490,22 @@ def download_video(url: str):
         url_download_path = "/root/data/" + dir + "/" + vname
         response = requests.get(url)
         if response.status_code == 200:
-            with open(url_download_path, 'wb') as file:
+            with open(url_download_path, "wb") as file:
                 file.write(response.content)
         else:
             return {"download r2 object error"}
 
-    cmd = (
-        '%s %s -o "%s"' % (ytcmd, url, vname)
-    )
+    cmd = '%s %s -o "%s"' % (ytcmd, url, vname)
     logger.info("Execute: " + cmd)
-    p = Popen(cmd, shell=True, cwd="/root/data/"+dir)
+    p = Popen(cmd, shell=True, cwd="/root/data/" + dir)
     p.wait()
 
     # split audio.
-    ffmpegCmd = (
-        'ls | xargs -I {} sh -c "ffmpeg -i {} -ar 44100 out.wav; rm {}"'
-    )
+    ffmpegCmd = 'ls | xargs -I {} sh -c "ffmpeg -i {} -ar 44100 out.wav; rm {}"'
     p1 = Popen(ffmpegCmd, shell=True, cwd="/root/data/" + dir)
     p1.wait()
     return {"path": "/root/data/" + dir, "name": "out.wav", "dirName": dir}
+
 
 # but3.click(click_train,[exp_dir1,sr2,if_f0_3,save_epoch10,total_epoch11,batch_size12,if_save_latest13,pretrained_G14,pretrained_D15,gpus16])
 
@@ -689,8 +685,7 @@ def train_index(exp_dir1, version19):
     np.random.shuffle(big_npy_idx)
     big_npy = big_npy[big_npy_idx]
     if big_npy.shape[0] > 2e5:
-        infos.append("Trying doing kmeans %s shape to 10k centers." %
-                     big_npy.shape[0])
+        infos.append("Trying doing kmeans %s shape to 10k centers." % big_npy.shape[0])
         yield "\n".join(infos)
         try:
             big_npy = (
@@ -714,8 +709,7 @@ def train_index(exp_dir1, version19):
     n_ivf = min(int(16 * np.sqrt(big_npy.shape[0])), big_npy.shape[0] // 39)
     infos.append("%s,%s" % (big_npy.shape, n_ivf))
     yield "\n".join(infos)
-    index = faiss.index_factory(
-        256 if version19 == "v1" else 768, "IVF%s,Flat" % n_ivf)
+    index = faiss.index_factory(256 if version19 == "v1" else 768, "IVF%s,Flat" % n_ivf)
     # index = faiss.index_factory(256if version19=="v1"else 768, "IVF%s,PQ128x4fs,RFlat"%n_ivf)
     infos.append("training")
     yield "\n".join(infos)
@@ -731,7 +725,7 @@ def train_index(exp_dir1, version19):
     yield "\n".join(infos)
     batch_size_add = 8192
     for i in range(0, big_npy.shape[0], batch_size_add):
-        index.add(big_npy[i: i + batch_size_add])
+        index.add(big_npy[i : i + batch_size_add])
     faiss.write_index(
         index,
         "%s/added_IVF%s_Flat_nprobe_%s_%s_%s.index"
@@ -794,8 +788,7 @@ def train1key(
 
     # step1:处理数据
     yield get_info_str(i18n("step1:正在处理数据"))
-    [get_info_str(_) for _ in preprocess_dataset(
-        trainset_dir4, exp_dir1, sr2, np7)]
+    [get_info_str(_) for _ in preprocess_dataset(trainset_dir4, exp_dir1, sr2, np7)]
 
     # step2a:提取音高
     yield get_info_str(i18n("step2:正在提取音高&正在提取特征"))
@@ -843,8 +836,7 @@ def change_info_(ckpt_path):
         ) as f:
             info = eval(f.read().strip("\n").split("\n")[0].split("\t")[-1])
             sr, f0 = info["sample_rate"], info["if_f0"]
-            version = "v2" if (
-                "version" in info and info["version"] == "v2") else "v1"
+            version = "v2" if ("version" in info and info["version"] == "v2") else "v1"
             return sr, str(f0), version
     except:
         traceback.print_exc()
@@ -877,8 +869,7 @@ with gr.Blocks(title="RVC WebUI") as app:
                     refresh_button = gr.Button(
                         i18n("刷新音色列表和索引路径"), variant="primary"
                     )
-                    clean_button = gr.Button(
-                        i18n("卸载音色省显存"), variant="primary")
+                    clean_button = gr.Button(i18n("卸载音色省显存"), variant="primary")
                 spk_item = gr.Slider(
                     minimum=0,
                     maximum=2333,
@@ -1021,7 +1012,7 @@ with gr.Blocks(title="RVC WebUI") as app:
                                 resample_sr0,
                                 rms_mix_rate0,
                                 protect0,
-                                storeDir
+                                storeDir,
                             ],
                             # [vc_output1],
                             [vc_output1, vc_output2],
@@ -1169,8 +1160,7 @@ with gr.Blocks(title="RVC WebUI") as app:
                 sid0.change(
                     fn=vc.get_vc,
                     inputs=[sid0, protect0, protect1],
-                    outputs=[spk_item, protect0, protect1,
-                             file_index2, file_index4],
+                    outputs=[spk_item, protect0, protect1, file_index2, file_index4],
                     api_name="infer_change_voice",
                 )
         with gr.TabItem(i18n("伴奏人声分离&去混响&去回声")):
@@ -1232,21 +1222,14 @@ with gr.Blocks(title="RVC WebUI") as app:
                         api_name="uvr_convert",
                     )
         with gr.TabItem("yt-dlp"):
-            gr.Markdown(
-                value="yt-dlp"
-            )
+            gr.Markdown(value="yt-dlp")
             url = gr.Textbox(
                 label="src",
                 interactive=True,
             )
             info3 = gr.Textbox(label=i18n("输出信息"), value="", max_lines=10)
             btn = gr.Button("f1", variant="primary")
-            btn.click(
-                download_video,
-                [url],
-                info3,
-                api_name="download_video"
-            )
+            btn.click(download_video, [url], info3, api_name="download_video")
 
             mergeBtn = gr.Button("merge", variant="primary")
             m1 = gr.Textbox(
@@ -1263,10 +1246,7 @@ with gr.Blocks(title="RVC WebUI") as app:
             )
             mergeInfo = gr.Textbox("mergeinfo", value="", max_lines=10)
             mergeBtn.click(
-                merge_video,
-                [m1, m2, dir],
-                [mergeInfo],
-                api_name="merge_video"
+                merge_video, [m1, m2, dir], [mergeInfo], api_name="merge_video"
             )
         with gr.TabItem(i18n("训练")):
             gr.Markdown(
@@ -1354,8 +1334,7 @@ with gr.Blocks(title="RVC WebUI") as app:
                             label=i18n(
                                 "选择音高提取算法:输入歌声可用pm提速,高质量语音但CPU差可用dio提速,harvest质量更好但慢,rmvpe效果最好且微吃CPU/GPU"
                             ),
-                            choices=["pm", "harvest", "dio",
-                                     "rmvpe", "rmvpe_gpu"],
+                            choices=["pm", "harvest", "dio", "rmvpe", "rmvpe_gpu"],
                             value="rmvpe_gpu",
                             interactive=True,
                         )
@@ -1368,8 +1347,7 @@ with gr.Blocks(title="RVC WebUI") as app:
                             visible=F0GPUVisible,
                         )
                     but2 = gr.Button(i18n("特征提取"), variant="primary")
-                    info2 = gr.Textbox(label=i18n("输出信息"),
-                                       value="", max_lines=8)
+                    info2 = gr.Textbox(label=i18n("输出信息"), value="", max_lines=8)
                     f0method8.change(
                         fn=change_f0_method,
                         inputs=[f0method8],
@@ -1474,8 +1452,7 @@ with gr.Blocks(title="RVC WebUI") as app:
                     but3 = gr.Button(i18n("训练模型"), variant="primary")
                     but4 = gr.Button(i18n("训练特征索引"), variant="primary")
                     but5 = gr.Button(i18n("一键训练"), variant="primary")
-                    info3 = gr.Textbox(label=i18n("输出信息"),
-                                       value="", max_lines=10)
+                    info3 = gr.Textbox(label=i18n("输出信息"), value="", max_lines=10)
                     but3.click(
                         click_train,
                         [
@@ -1574,8 +1551,7 @@ with gr.Blocks(title="RVC WebUI") as app:
                     )
                 with gr.Row():
                     but6 = gr.Button(i18n("融合"), variant="primary")
-                    info4 = gr.Textbox(label=i18n("输出信息"),
-                                       value="", max_lines=8)
+                    info4 = gr.Textbox(label=i18n("输出信息"), value="", max_lines=8)
                 but6.click(
                     merge,
                     [
@@ -1613,8 +1589,7 @@ with gr.Blocks(title="RVC WebUI") as app:
                     )
                 with gr.Row():
                     but7 = gr.Button(i18n("修改"), variant="primary")
-                    info5 = gr.Textbox(label=i18n("输出信息"),
-                                       value="", max_lines=8)
+                    info5 = gr.Textbox(label=i18n("输出信息"), value="", max_lines=8)
                 but7.click(
                     change_info,
                     [ckpt_path0, info_, name_to_save1],
@@ -1630,10 +1605,8 @@ with gr.Blocks(title="RVC WebUI") as app:
                         label=i18n("模型路径"), value="", interactive=True
                     )
                     but8 = gr.Button(i18n("查看"), variant="primary")
-                    info6 = gr.Textbox(label=i18n("输出信息"),
-                                       value="", max_lines=8)
-                but8.click(show_info, [ckpt_path1],
-                           info6, api_name="ckpt_show")
+                    info6 = gr.Textbox(label=i18n("输出信息"), value="", max_lines=8)
+                but8.click(show_info, [ckpt_path1], info6, api_name="ckpt_show")
             with gr.Group():
                 gr.Markdown(
                     value=i18n(
@@ -1674,8 +1647,7 @@ with gr.Blocks(title="RVC WebUI") as app:
                         interactive=True,
                     )
                     but9 = gr.Button(i18n("提取"), variant="primary")
-                    info7 = gr.Textbox(label=i18n("输出信息"),
-                                       value="", max_lines=8)
+                    info7 = gr.Textbox(label=i18n("输出信息"), value="", max_lines=8)
                     ckpt_path2.change(
                         change_info_, [ckpt_path2], [sr__, if_f0__, version_1]
                     )
@@ -1700,8 +1672,7 @@ with gr.Blocks(title="RVC WebUI") as app:
             with gr.Row():
                 butOnnx = gr.Button(i18n("导出Onnx模型"), variant="primary")
             butOnnx.click(
-                export_onnx, [
-                    ckpt_dir, onnx_dir], infoOnnx, api_name="export_onnx"
+                export_onnx, [ckpt_dir, onnx_dir], infoOnnx, api_name="export_onnx"
             )
 
         tab_faq = i18n("常见问题解答")

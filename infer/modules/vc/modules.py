@@ -55,8 +55,7 @@ class VC:
                 self.hubert_model is not None
             ):  # 考虑到轮询, 需要加个判断看是否 sid 是由有模型切换到无模型的
                 logger.info("Clean model cache")
-                del (self.net_g, self.n_spk,
-                     self.hubert_model, self.tgt_sr)  # ,cpt
+                del (self.net_g, self.n_spk, self.hubert_model, self.tgt_sr)  # ,cpt
                 self.hubert_model = self.net_g = self.n_spk = self.hubert_model = (
                     self.tgt_sr
                 ) = None
@@ -71,16 +70,14 @@ class VC:
                             *self.cpt["config"], is_half=self.config.is_half
                         )
                     else:
-                        self.net_g = SynthesizerTrnMs256NSFsid_nono(
-                            *self.cpt["config"])
+                        self.net_g = SynthesizerTrnMs256NSFsid_nono(*self.cpt["config"])
                 elif self.version == "v2":
                     if self.if_f0 == 1:
                         self.net_g = SynthesizerTrnMs768NSFsid(
                             *self.cpt["config"], is_half=self.config.is_half
                         )
                     else:
-                        self.net_g = SynthesizerTrnMs768NSFsid_nono(
-                            *self.cpt["config"])
+                        self.net_g = SynthesizerTrnMs768NSFsid_nono(*self.cpt["config"])
                 del self.net_g, self.cpt
                 if torch.cuda.is_available():
                     torch.cuda.empty_cache()
@@ -219,16 +216,16 @@ class VC:
             )
 
             if len(storeDir) > 0:
-                with wave.open(storeDir + '/converted.wav', 'wb') as wf:
-                  wf.setnchannels(1)  # 设置声道为1（单声道）
-                  wf.setsampwidth(2)  # 设置采样宽度为2字节（int16）
-                  wf.setframerate(tgt_sr)  # 设置采样率为00 Hz
-                  wf.setnframes(len(audio_opt))  # 设置帧数为数据长度
-                  wf.writeframes(audio_opt.tobytes())  # 将 int16 数组转换为字节并写入
+                with wave.open(storeDir + "/converted.wav", "wb") as wf:
+                    wf.setnchannels(1)  # 设置声道为1（单声道）
+                    wf.setsampwidth(2)  # 设置采样宽度为2字节（int16）
+                    wf.setframerate(tgt_sr)  # 设置采样率为00 Hz
+                    wf.setnframes(len(audio_opt))  # 设置帧数为数据长度
+                    wf.writeframes(audio_opt.tobytes())  # 将 int16 数组转换为字节并写入
                 return (
-                    "Success.\n%s\nTime:\nnpy: %.2fs, f0: %.2fs, infer: %.2fs." 
+                    "Success.\n%s\nTime:\nnpy: %.2fs, f0: %.2fs, infer: %.2fs."
                     % (index_info, *times),
-                    (tgt_sr, np.array([0], dtype=np.int16))
+                    (tgt_sr, np.array([0], dtype=np.int16)),
                 )
 
             # logger.info("audio_opt", audio_opt)
@@ -261,11 +258,9 @@ class VC:
     ):
         try:
             dir_path = (
-                dir_path.strip(" ").strip('"').strip(
-                    "\n").strip('"').strip(" ")
+                dir_path.strip(" ").strip('"').strip("\n").strip('"').strip(" ")
             )  # 防止小白拷路径头尾带了空格和"和回车
-            opt_root = opt_root.strip(" ").strip(
-                '"').strip("\n").strip('"').strip(" ")
+            opt_root = opt_root.strip(" ").strip('"').strip("\n").strip('"').strip(" ")
             os.makedirs(opt_root, exist_ok=True)
             try:
                 if dir_path != "":
