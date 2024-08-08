@@ -1,0 +1,251 @@
+2024-08-01 17:00:16 | INFO | faiss.loader | Loading faiss with AVX512 support.
+2024-08-01 17:00:16 | INFO | faiss.loader | Successfully loaded faiss with AVX512 support.
+2024-08-01 17:00:17 | INFO | httpx | HTTP Request: GET https://api.gradio.app/gradio-messaging/en "HTTP/1.1 200 OK"
+Unable to connect to VS Code server: Error in request.
+Error: connect ENOENT /run/user/0/vscode-ipc-6af8142f-e5c8-4433-a527-d0b6a735b6bb.sock
+    at PipeConnectWrap.afterConnect [as oncomplete] (node:net:1595:16) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'connect',
+  address: '/run/user/0/vscode-ipc-6af8142f-e5c8-4433-a527-d0b6a735b6bb.sock'
+}
+Running on local URL:  http://0.0.0.0:6666
+IMPORTANT: You are using gradio version 4.23.0, however version 4.29.0 is available, please upgrade.
+--------
+  0%|          | 0/149 [00:00<?, ?it/s]  1%|          | 1/149 [00:00<01:29,  1.66it/s]  3%|▎         | 5/149 [00:00<00:16,  8.49it/s]  5%|▌         | 8/149 [00:00<00:10, 12.84it/s]  7%|▋         | 11/149 [00:00<00:08, 16.68it/s] 10%|█         | 15/149 [00:01<00:06, 20.69it/s] 13%|█▎        | 19/149 [00:01<00:05, 23.48it/s] 15%|█▍        | 22/149 [00:01<00:05, 25.01it/s] 17%|█▋        | 26/149 [00:01<00:04, 26.71it/s] 19%|█▉        | 29/149 [00:01<00:04, 27.37it/s] 21%|██▏       | 32/149 [00:01<00:04, 27.89it/s] 23%|██▎       | 35/149 [00:01<00:04, 28.29it/s] 26%|██▌       | 38/149 [00:01<00:03, 28.71it/s] 28%|██▊       | 41/149 [00:01<00:03, 29.05it/s] 30%|███       | 45/149 [00:02<00:03, 29.41it/s] 33%|███▎      | 49/149 [00:02<00:03, 29.63it/s] 35%|███▍      | 52/149 [00:02<00:03, 29.63it/s] 38%|███▊      | 56/149 [00:02<00:03, 29.74it/s] 40%|███▉      | 59/149 [00:02<00:03, 29.63it/s] 42%|████▏     | 62/149 [00:02<00:02, 29.47it/s] 44%|████▎     | 65/149 [00:02<00:02, 29.41it/s] 46%|████▌     | 68/149 [00:02<00:02, 29.37it/s] 48%|████▊     | 71/149 [00:02<00:02, 29.33it/s] 50%|████▉     | 74/149 [00:03<00:02, 29.32it/s] 52%|█████▏    | 77/149 [00:03<00:02, 29.33it/s] 54%|█████▎    | 80/149 [00:03<00:02, 29.41it/s] 56%|█████▋    | 84/149 [00:03<00:02, 29.51it/s] 58%|█████▊    | 87/149 [00:03<00:02, 29.60it/s] 60%|██████    | 90/149 [00:03<00:01, 29.55it/s] 62%|██████▏   | 93/149 [00:03<00:01, 29.53it/s] 64%|██████▍   | 96/149 [00:03<00:01, 29.55it/s] 66%|██████▋   | 99/149 [00:03<00:01, 29.63it/s] 69%|██████▉   | 103/149 [00:04<00:01, 29.83it/s] 71%|███████   | 106/149 [00:04<00:01, 29.82it/s] 73%|███████▎  | 109/149 [00:04<00:01, 29.72it/s] 75%|███████▌  | 112/149 [00:04<00:01, 29.65it/s] 77%|███████▋  | 115/149 [00:04<00:01, 29.70it/s] 79%|███████▉  | 118/149 [00:04<00:01, 29.66it/s] 81%|████████  | 121/149 [00:04<00:00, 29.61it/s] 83%|████████▎ | 124/149 [00:04<00:00, 29.61it/s] 85%|████████▌ | 127/149 [00:04<00:00, 29.68it/s] 87%|████████▋ | 130/149 [00:04<00:00, 29.72it/s] 89%|████████▉ | 133/149 [00:05<00:00, 29.79it/s] 92%|█████████▏| 137/149 [00:05<00:00, 29.93it/s] 94%|█████████▍| 140/149 [00:05<00:00, 29.89it/s] 96%|█████████▌| 143/149 [00:05<00:00, 29.90it/s] 99%|█████████▊| 147/149 [00:05<00:00, 29.91it/s]100%|██████████| 149/149 [00:05<00:00, 26.69it/s]
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Trailing option(s) found in the command: may be ignored.
+Guessed Channel Layout for Input Stream #0.0 : stereo
+Input #0, wav, from 'opt/instrument_out.wav_10.wav':
+  Duration: 00:06:53.84, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+Output #0, mp3, to 'opt/instrument_out.wav_10.mp3':
+  Metadata:
+    TSSE            : Lavf58.76.100
+  Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p
+    Metadata:
+      encoder         : Lavc58.134.100 libmp3lame
+size=       0kB time=00:00:00.00 bitrate=N/A speed=N/A    size=     256kB time=00:00:23.79 bitrate=  88.1kbits/s speed=47.6x    size=     768kB time=00:00:50.23 bitrate= 125.2kbits/s speed=50.2x    size=    1024kB time=00:01:15.73 bitrate= 110.8kbits/s speed=50.5x    size=    1280kB time=00:01:37.25 bitrate= 107.8kbits/s speed=48.6x    size=    1792kB time=00:01:58.04 bitrate= 124.4kbits/s speed=47.2x    size=    2048kB time=00:02:21.34 bitrate= 118.7kbits/s speed=47.1x    size=    2560kB time=00:02:45.01 bitrate= 127.1kbits/s speed=47.1x    size=    2816kB time=00:03:09.57 bitrate= 121.7kbits/s speed=47.4x    size=    3328kB time=00:03:36.66 bitrate= 125.8kbits/s speed=48.1x    size=    3584kB time=00:04:03.51 bitrate= 120.6kbits/s speed=48.7x    size=    4096kB time=00:04:28.95 bitrate= 124.8kbits/s speed=48.9x    size=    4352kB time=00:04:54.66 bitrate= 121.0kbits/s speed=49.1x    size=    4864kB time=00:05:19.87 bitrate= 124.6kbits/s speed=49.2x    size=    5376kB time=00:05:44.97 bitrate= 127.7kbits/s speed=49.2x    size=    5632kB time=00:06:06.81 bitrate= 125.8kbits/s speed=48.9x    size=    5888kB time=00:06:28.99 bitrate= 124.0kbits/s speed=48.6x    size=    6400kB time=00:06:50.64 bitrate= 127.7kbits/s speed=48.3x    size=    6467kB time=00:06:53.83 bitrate= 128.0kbits/s speed=48.2x    
+video:0kB audio:6467kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.003821%
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Trailing option(s) found in the command: may be ignored.
+Guessed Channel Layout for Input Stream #0.0 : stereo
+Input #0, wav, from 'opt/vocal_out.wav_10.wav':
+  Duration: 00:06:53.84, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+Output #0, mp3, to 'opt/vocal_out.wav_10.mp3':
+  Metadata:
+    TSSE            : Lavf58.76.100
+  Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p
+    Metadata:
+      encoder         : Lavc58.134.100 libmp3lame
+size=       0kB time=00:00:00.00 bitrate=N/A speed=N/A    size=     256kB time=00:00:24.50 bitrate=  85.6kbits/s speed=  49x    size=     512kB time=00:00:47.80 bitrate=  87.7kbits/s speed=47.8x    size=    1024kB time=00:01:18.13 bitrate= 107.4kbits/s speed=52.1x    size=    1536kB time=00:01:48.20 bitrate= 116.3kbits/s speed=54.1x    size=    2048kB time=00:02:12.36 bitrate= 126.8kbits/s speed=52.9x    size=    2304kB time=00:02:39.66 bitrate= 118.2kbits/s speed=53.2x    size=    2816kB time=00:03:12.10 bitrate= 120.1kbits/s speed=54.9x    size=    3328kB time=00:03:38.17 bitrate= 125.0kbits/s speed=54.5x    size=    3840kB time=00:04:09.96 bitrate= 125.8kbits/s speed=55.5x    size=    4096kB time=00:04:37.78 bitrate= 120.8kbits/s speed=55.5x    size=    4608kB time=00:05:00.64 bitrate= 125.6kbits/s speed=54.6x    size=    5120kB time=00:05:30.89 bitrate= 126.8kbits/s speed=55.1x    size=    5376kB time=00:05:58.24 bitrate= 122.9kbits/s speed=55.1x    size=    6144kB time=00:06:34.00 bitrate= 127.7kbits/s speed=56.3x    size=    6467kB time=00:06:53.83 bitrate= 128.0kbits/s speed=56.4x    
+video:0kB audio:6467kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.003821%
+  0%|          | 0/149 [00:00<?, ?it/s]  3%|▎         | 4/149 [00:00<00:04, 30.65it/s]  5%|▌         | 8/149 [00:00<00:04, 30.32it/s]  8%|▊         | 12/149 [00:00<00:04, 30.01it/s] 11%|█         | 16/149 [00:00<00:04, 30.04it/s] 13%|█▎        | 20/149 [00:00<00:04, 30.16it/s] 16%|█▌        | 24/149 [00:00<00:04, 30.02it/s] 19%|█▉        | 28/149 [00:00<00:04, 29.76it/s] 21%|██        | 31/149 [00:01<00:03, 29.53it/s] 23%|██▎       | 34/149 [00:01<00:03, 29.38it/s] 25%|██▍       | 37/149 [00:01<00:03, 29.36it/s] 27%|██▋       | 40/149 [00:01<00:03, 29.38it/s] 29%|██▉       | 43/149 [00:01<00:03, 29.45it/s] 31%|███       | 46/149 [00:01<00:03, 29.58it/s] 33%|███▎      | 49/149 [00:01<00:03, 29.53it/s] 35%|███▍      | 52/149 [00:01<00:03, 29.53it/s] 37%|███▋      | 55/149 [00:01<00:03, 29.52it/s] 39%|███▉      | 58/149 [00:01<00:03, 29.36it/s] 41%|████      | 61/149 [00:02<00:03, 29.29it/s] 43%|████▎     | 64/149 [00:02<00:02, 29.25it/s] 45%|████▍     | 67/149 [00:02<00:02, 29.34it/s] 47%|████▋     | 70/149 [00:02<00:02, 29.41it/s] 49%|████▉     | 73/149 [00:02<00:02, 29.42it/s] 51%|█████     | 76/149 [00:02<00:02, 29.35it/s] 53%|█████▎    | 79/149 [00:02<00:02, 29.53it/s] 55%|█████▌    | 82/149 [00:02<00:02, 29.62it/s] 57%|█████▋    | 85/149 [00:02<00:02, 29.65it/s] 59%|█████▉    | 88/149 [00:02<00:02, 29.48it/s] 61%|██████    | 91/149 [00:03<00:01, 29.39it/s] 63%|██████▎   | 94/149 [00:03<00:01, 29.48it/s] 65%|██████▌   | 97/149 [00:03<00:01, 29.55it/s] 67%|██████▋   | 100/149 [00:03<00:01, 29.57it/s] 69%|██████▉   | 103/149 [00:03<00:01, 29.64it/s] 71%|███████   | 106/149 [00:03<00:01, 29.65it/s] 73%|███████▎  | 109/149 [00:03<00:01, 29.68it/s] 75%|███████▌  | 112/149 [00:03<00:01, 29.51it/s] 77%|███████▋  | 115/149 [00:03<00:01, 29.52it/s] 79%|███████▉  | 118/149 [00:03<00:01, 29.40it/s] 81%|████████  | 121/149 [00:04<00:00, 29.27it/s] 83%|████████▎ | 124/149 [00:04<00:00, 29.25it/s] 85%|████████▌ | 127/149 [00:04<00:00, 29.24it/s] 87%|████████▋ | 130/149 [00:04<00:00, 29.34it/s] 89%|████████▉ | 133/149 [00:04<00:00, 29.34it/s] 91%|█████████▏| 136/149 [00:04<00:00, 29.46it/s] 93%|█████████▎| 139/149 [00:04<00:00, 29.47it/s] 95%|█████████▌| 142/149 [00:04<00:00, 29.28it/s] 97%|█████████▋| 145/149 [00:04<00:00, 29.24it/s] 99%|█████████▉| 148/149 [00:05<00:00, 29.11it/s]100%|██████████| 149/149 [00:05<00:00, 29.49it/s]
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Trailing option(s) found in the command: may be ignored.
+Guessed Channel Layout for Input Stream #0.0 : stereo
+Input #0, wav, from 'opt/instrument_a_10.wav':
+  Duration: 00:06:53.84, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+Output #0, mp3, to 'opt/instrument_a_10.mp3':
+  Metadata:
+    TSSE            : Lavf58.76.100
+  Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p
+    Metadata:
+      encoder         : Lavc58.134.100 libmp3lame
+size=       0kB time=00:00:00.00 bitrate=N/A speed=N/A    size=     256kB time=00:00:23.61 bitrate=  88.8kbits/s speed=47.2x    size=     512kB time=00:00:48.77 bitrate=  86.0kbits/s speed=48.8x    size=    1024kB time=00:01:14.05 bitrate= 113.3kbits/s speed=49.4x    size=    1280kB time=00:01:36.05 bitrate= 109.2kbits/s speed=  48x    size=    1792kB time=00:01:57.36 bitrate= 125.1kbits/s speed=46.9x    size=    2048kB time=00:02:20.90 bitrate= 119.1kbits/s speed=  47x    size=    2560kB time=00:02:45.85 bitrate= 126.4kbits/s speed=47.4x    size=    2816kB time=00:03:11.29 bitrate= 120.6kbits/s speed=47.8x    size=    3328kB time=00:03:38.09 bitrate= 125.0kbits/s speed=48.5x    size=    3584kB time=00:04:05.36 bitrate= 119.7kbits/s speed=49.1x    size=    4096kB time=00:04:31.41 bitrate= 123.6kbits/s speed=49.3x    size=    4608kB time=00:04:57.30 bitrate= 127.0kbits/s speed=49.5x    size=    4864kB time=00:05:22.87 bitrate= 123.4kbits/s speed=49.7x    size=    5376kB time=00:05:47.71 bitrate= 126.7kbits/s speed=49.7x    size=    5632kB time=00:06:10.10 bitrate= 124.7kbits/s speed=49.3x    size=    5888kB time=00:06:32.28 bitrate= 123.0kbits/s speed=  49x    size=    6467kB time=00:06:53.83 bitrate= 128.0kbits/s speed=48.7x    
+video:0kB audio:6467kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.003821%
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Trailing option(s) found in the command: may be ignored.
+Guessed Channel Layout for Input Stream #0.0 : stereo
+Input #0, wav, from 'opt/vocal_a_10.wav':
+  Duration: 00:06:53.84, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> mp3 (libmp3lame))
+Press [q] to stop, [?] for help
+Output #0, mp3, to 'opt/vocal_a_10.mp3':
+  Metadata:
+    TSSE            : Lavf58.76.100
+  Stream #0:0: Audio: mp3, 44100 Hz, stereo, s16p
+    Metadata:
+      encoder         : Lavc58.134.100 libmp3lame
+size=       0kB time=00:00:00.00 bitrate=N/A speed=N/A    size=     256kB time=00:00:24.79 bitrate=  84.6kbits/s speed=49.5x    size=     768kB time=00:00:54.15 bitrate= 116.2kbits/s speed=54.1x    size=    1280kB time=00:01:23.25 bitrate= 126.0kbits/s speed=55.5x    size=    1792kB time=00:01:56.27 bitrate= 126.3kbits/s speed=58.1x    size=    2048kB time=00:02:22.34 bitrate= 117.9kbits/s speed=56.9x    size=    2560kB time=00:02:58.41 bitrate= 117.5kbits/s speed=59.4x    size=    3072kB time=00:03:25.19 bitrate= 122.6kbits/s speed=58.6x    size=    3584kB time=00:03:59.54 bitrate= 122.6kbits/s speed=59.9x    size=    4096kB time=00:04:27.20 bitrate= 125.6kbits/s speed=59.3x    size=    4608kB time=00:04:57.14 bitrate= 127.0kbits/s speed=59.4x    size=    5120kB time=00:05:37.47 bitrate= 124.3kbits/s speed=61.3x    size=    5632kB time=00:06:02.60 bitrate= 127.2kbits/s speed=60.4x    size=    6144kB time=00:06:43.17 bitrate= 124.8kbits/s speed=  62x    size=    6467kB time=00:06:53.83 bitrate= 128.0kbits/s speed=61.9x    
+video:0kB audio:6467kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.003821%
+[generic] Extracting URL: https://oomol-rvc-upload.dajiba.club/lzbda9vz
+[generic] lzbda9vz: Downloading webpage
+WARNING: [generic] Falling back on generic information extractor
+WARNING: [generic] URL could be a direct video link, returning it as such.
+[info] lzbda9vz: Downloading 1 format(s): 0
+[download] vname has already been downloaded
+[download] 100% of   69.62MiB
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Guessed Channel Layout for Input Stream #0.0 : stereo
+Input #0, wav, from 'vname':
+  Metadata:
+    encoder         : Lavf59.27.100
+  Duration: 00:06:53.85, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'out.wav':
+  Metadata:
+    ISFT            : Lavf58.76.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc58.134.100 pcm_s16le
+size=       4kB time=00:00:00.00 bitrate=N/A speed=N/A    size=   71292kB time=00:06:53.82 bitrate=1411.3kbits/s speed=1.73e+03x    
+video:0kB audio:71292kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.000107%
+  0%|          | 0/149 [00:00<?, ?it/s]  2%|▏         | 3/149 [00:00<00:04, 29.87it/s]  4%|▍         | 6/149 [00:00<00:04, 29.57it/s]  6%|▌         | 9/149 [00:00<00:04, 29.63it/s]  8%|▊         | 12/149 [00:00<00:04, 29.51it/s] 10%|█         | 15/149 [00:00<00:04, 29.62it/s] 12%|█▏        | 18/149 [00:00<00:04, 29.48it/s] 14%|█▍        | 21/149 [00:00<00:04, 29.29it/s] 16%|█▌        | 24/149 [00:00<00:04, 29.39it/s] 18%|█▊        | 27/149 [00:00<00:04, 28.95it/s] 20%|██        | 30/149 [00:01<00:04, 28.97it/s] 22%|██▏       | 33/149 [00:01<00:04, 28.85it/s] 24%|██▍       | 36/149 [00:01<00:03, 29.12it/s] 26%|██▌       | 39/149 [00:01<00:03, 29.25it/s] 28%|██▊       | 42/149 [00:01<00:03, 29.21it/s] 30%|███       | 45/149 [00:01<00:03, 29.23it/s] 32%|███▏      | 48/149 [00:01<00:03, 29.34it/s] 34%|███▍      | 51/149 [00:01<00:03, 29.26it/s] 36%|███▌      | 54/149 [00:01<00:03, 29.32it/s] 38%|███▊      | 57/149 [00:01<00:03, 29.22it/s] 40%|████      | 60/149 [00:02<00:03, 29.08it/s] 42%|████▏     | 63/149 [00:02<00:02, 29.02it/s] 44%|████▍     | 66/149 [00:02<00:02, 29.20it/s] 46%|████▋     | 69/149 [00:02<00:02, 29.23it/s] 48%|████▊     | 72/149 [00:02<00:02, 29.20it/s] 50%|█████     | 75/149 [00:02<00:02, 29.33it/s] 52%|█████▏    | 78/149 [00:02<00:02, 29.15it/s] 54%|█████▍    | 81/149 [00:02<00:02, 29.01it/s] 56%|█████▋    | 84/149 [00:02<00:02, 29.09it/s] 58%|█████▊    | 87/149 [00:02<00:02, 29.03it/s] 60%|██████    | 90/149 [00:03<00:02, 29.21it/s] 62%|██████▏   | 93/149 [00:03<00:01, 29.24it/s] 64%|██████▍   | 96/149 [00:03<00:01, 29.39it/s] 66%|██████▋   | 99/149 [00:03<00:01, 29.46it/s] 68%|██████▊   | 102/149 [00:03<00:01, 29.56it/s] 70%|███████   | 105/149 [00:03<00:01, 29.60it/s] 72%|███████▏  | 108/149 [00:03<00:01, 29.50it/s] 74%|███████▍  | 111/149 [00:03<00:01, 29.58it/s] 77%|███████▋  | 114/149 [00:03<00:01, 29.23it/s] 79%|███████▊  | 117/149 [00:03<00:01, 29.32it/s] 81%|████████  | 120/149 [00:04<00:00, 29.29it/s] 83%|████████▎ | 123/149 [00:04<00:00, 29.23it/s] 85%|████████▍ | 126/149 [00:04<00:00, 29.38it/s] 87%|████████▋ | 129/149 [00:04<00:00, 29.30it/s] 89%|████████▊ | 132/149 [00:04<00:00, 29.30it/s] 91%|█████████ | 135/149 [00:04<00:00, 29.44it/s] 93%|█████████▎| 138/149 [00:04<00:00, 29.52it/s] 95%|█████████▍| 141/149 [00:04<00:00, 29.49it/s] 97%|█████████▋| 144/149 [00:04<00:00, 29.38it/s] 99%|█████████▊| 147/149 [00:05<00:00, 29.40it/s]100%|██████████| 149/149 [00:05<00:00, 29.30it/s]
+[generic] Extracting URL: https://oomol-rvc-upload.dajiba.club/lzbda9vz
+[generic] lzbda9vz: Downloading webpage
+WARNING: [generic] Falling back on generic information extractor
+WARNING: [generic] URL could be a direct video link, returning it as such.
+[info] lzbda9vz: Downloading 1 format(s): 0
+[download] vname has already been downloaded
+[download] 100% of   69.62MiB
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Guessed Channel Layout for Input Stream #0.0 : stereo
+Input #0, wav, from 'vname':
+  Metadata:
+    encoder         : Lavf59.27.100
+  Duration: 00:06:53.85, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'out.wav':
+  Metadata:
+    ISFT            : Lavf58.76.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc58.134.100 pcm_s16le
+size=       4kB time=00:00:00.00 bitrate=N/A speed=   0x    size=   71292kB time=00:06:53.82 bitrate=1411.3kbits/s speed=1.74e+03x    
+video:0kB audio:71292kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.000107%
+[generic] Extracting URL: https://oomol-rvc-upload.dajiba.club/lzbda9vz
+[generic] lzbda9vz: Downloading webpage
+WARNING: [generic] Falling back on generic information extractor
+WARNING: [generic] URL could be a direct video link, returning it as such.
+[info] lzbda9vz: Downloading 1 format(s): 0
+[download] vname has already been downloaded
+[download] 100% of   69.62MiB
+ffmpeg version 4.4.2-0ubuntu0.22.04.1 Copyright (c) 2000-2021 the FFmpeg developers
+  built with gcc 11 (Ubuntu 11.2.0-19ubuntu1)
+  configuration: --prefix=/usr --extra-version=0ubuntu0.22.04.1 --toolchain=hardened --libdir=/usr/lib/x86_64-linux-gnu --incdir=/usr/include/x86_64-linux-gnu --arch=amd64 --enable-gpl --disable-stripping --enable-gnutls --enable-ladspa --enable-libaom --enable-libass --enable-libbluray --enable-libbs2b --enable-libcaca --enable-libcdio --enable-libcodec2 --enable-libdav1d --enable-libflite --enable-libfontconfig --enable-libfreetype --enable-libfribidi --enable-libgme --enable-libgsm --enable-libjack --enable-libmp3lame --enable-libmysofa --enable-libopenjpeg --enable-libopenmpt --enable-libopus --enable-libpulse --enable-librabbitmq --enable-librubberband --enable-libshine --enable-libsnappy --enable-libsoxr --enable-libspeex --enable-libsrt --enable-libssh --enable-libtheora --enable-libtwolame --enable-libvidstab --enable-libvorbis --enable-libvpx --enable-libwebp --enable-libx265 --enable-libxml2 --enable-libxvid --enable-libzimg --enable-libzmq --enable-libzvbi --enable-lv2 --enable-omx --enable-openal --enable-opencl --enable-opengl --enable-sdl2 --enable-pocketsphinx --enable-librsvg --enable-libmfx --enable-libdc1394 --enable-libdrm --enable-libiec61883 --enable-chromaprint --enable-frei0r --enable-libx264 --enable-shared
+  libavutil      56. 70.100 / 56. 70.100
+  libavcodec     58.134.100 / 58.134.100
+  libavformat    58. 76.100 / 58. 76.100
+  libavdevice    58. 13.100 / 58. 13.100
+  libavfilter     7.110.100 /  7.110.100
+  libswscale      5.  9.100 /  5.  9.100
+  libswresample   3.  9.100 /  3.  9.100
+  libpostproc    55.  9.100 / 55.  9.100
+Guessed Channel Layout for Input Stream #0.0 : stereo
+Input #0, wav, from 'vname':
+  Metadata:
+    encoder         : Lavf59.27.100
+  Duration: 00:06:53.85, bitrate: 1411 kb/s
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+Stream mapping:
+  Stream #0:0 -> #0:0 (pcm_s16le (native) -> pcm_s16le (native))
+Press [q] to stop, [?] for help
+Output #0, wav, to 'out.wav':
+  Metadata:
+    ISFT            : Lavf58.76.100
+  Stream #0:0: Audio: pcm_s16le ([1][0][0][0] / 0x0001), 44100 Hz, stereo, s16, 1411 kb/s
+    Metadata:
+      encoder         : Lavc58.134.100 pcm_s16le
+size=       4kB time=00:00:00.00 bitrate=N/A speed=N/A    size=   71292kB time=00:06:53.82 bitrate=1411.3kbits/s speed=1.36e+03x    
+video:0kB audio:71292kB subtitle:0kB other streams:0kB global headers:0kB muxing overhead: 0.000107%
+  0%|          | 0/149 [00:00<?, ?it/s]  2%|▏         | 3/149 [00:00<00:04, 29.64it/s]  4%|▍         | 6/149 [00:00<00:04, 29.77it/s]  6%|▌         | 9/149 [00:00<00:04, 29.67it/s]  8%|▊         | 12/149 [00:00<00:04, 29.37it/s] 10%|█         | 15/149 [00:00<00:04, 29.53it/s] 12%|█▏        | 18/149 [00:00<00:04, 29.61it/s] 14%|█▍        | 21/149 [00:00<00:04, 29.46it/s] 16%|█▌        | 24/149 [00:00<00:04, 29.46it/s] 18%|█▊        | 27/149 [00:00<00:04, 29.35it/s] 20%|██        | 30/149 [00:01<00:04, 29.17it/s] 22%|██▏       | 33/149 [00:01<00:03, 29.12it/s] 24%|██▍       | 36/149 [00:01<00:03, 29.14it/s] 26%|██▌       | 39/149 [00:01<00:03, 29.23it/s] 28%|██▊       | 42/149 [00:01<00:03, 29.26it/s] 30%|███       | 45/149 [00:01<00:03, 29.24it/s] 32%|███▏      | 48/149 [00:01<00:03, 29.37it/s] 34%|███▍      | 51/149 [00:01<00:03, 29.50it/s] 36%|███▌      | 54/149 [00:01<00:03, 29.24it/s] 38%|███▊      | 57/149 [00:01<00:03, 29.07it/s] 40%|████      | 60/149 [00:02<00:03, 29.00it/s] 42%|████▏     | 63/149 [00:02<00:02, 29.01it/s] 44%|████▍     | 66/149 [00:02<00:02, 28.90it/s] 46%|████▋     | 69/149 [00:02<00:02, 29.01it/s] 48%|████▊     | 72/149 [00:02<00:02, 29.14it/s] 50%|█████     | 75/149 [00:02<00:02, 29.14it/s] 52%|█████▏    | 78/149 [00:02<00:02, 28.95it/s] 54%|█████▍    | 81/149 [00:02<00:02, 28.81it/s] 56%|█████▋    | 84/149 [00:02<00:02, 28.88it/s] 58%|█████▊    | 87/149 [00:02<00:02, 28.90it/s] 60%|██████    | 90/149 [00:03<00:02, 29.00it/s] 62%|██████▏   | 93/149 [00:03<00:01, 28.77it/s] 64%|██████▍   | 96/149 [00:03<00:01, 28.72it/s] 66%|██████▋   | 99/149 [00:03<00:01, 28.94it/s] 68%|██████▊   | 102/149 [00:03<00:01, 28.84it/s] 70%|███████   | 105/149 [00:03<00:01, 28.76it/s] 72%|███████▏  | 108/149 [00:03<00:01, 28.84it/s] 74%|███████▍  | 111/149 [00:03<00:01, 29.01it/s] 77%|███████▋  | 114/149 [00:03<00:01, 29.02it/s] 79%|███████▊  | 117/149 [00:04<00:01, 29.01it/s] 81%|████████  | 120/149 [00:04<00:00, 29.11it/s] 83%|████████▎ | 123/149 [00:04<00:00, 29.11it/s] 85%|████████▍ | 126/149 [00:04<00:00, 28.91it/s] 87%|████████▋ | 129/149 [00:04<00:00, 29.12it/s] 89%|████████▊ | 132/149 [00:04<00:00, 29.03it/s] 91%|█████████ | 135/149 [00:04<00:00, 29.00it/s] 93%|█████████▎| 138/149 [00:04<00:00, 28.80it/s] 95%|█████████▍| 141/149 [00:04<00:00, 28.97it/s] 97%|█████████▋| 144/149 [00:04<00:00, 29.10it/s] 99%|█████████▊| 147/149 [00:05<00:00, 29.03it/s]100%|██████████| 149/149 [00:05<00:00, 29.10it/s]
+Traceback (most recent call last):
+  File "/root/miniconda3/envs/rvc/lib/python3.10/site-packages/gradio/queueing.py", line 501, in call_prediction
+    output = await route_utils.call_process_api(
+  File "/root/miniconda3/envs/rvc/lib/python3.10/site-packages/gradio/route_utils.py", line 258, in call_process_api
+    output = await app.get_blocks().process_api(
+  File "/root/miniconda3/envs/rvc/lib/python3.10/site-packages/gradio/blocks.py", line 1684, in process_api
+    result = await self.call_function(
+  File "/root/miniconda3/envs/rvc/lib/python3.10/site-packages/gradio/blocks.py", line 1250, in call_function
+    prediction = await anyio.to_thread.run_sync(
+  File "/root/miniconda3/envs/rvc/lib/python3.10/site-packages/anyio/to_thread.py", line 56, in run_sync
+    return await get_async_backend().run_sync_in_worker_thread(
+  File "/root/miniconda3/envs/rvc/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 2144, in run_sync_in_worker_thread
+    return await future
+  File "/root/miniconda3/envs/rvc/lib/python3.10/site-packages/anyio/_backends/_asyncio.py", line 851, in run
+    result = context.run(func, *args)
+  File "/root/miniconda3/envs/rvc/lib/python3.10/site-packages/gradio/utils.py", line 750, in wrapper
+    response = f(*args, **kwargs)
+  File "/root/Retrieval-based-Voice-Conversion-WebUI/infer-web.py", line 490, in download_video
+    if url.startswith("https://oomol-rvc-upload.dajiba.club"):
+AttributeError: 'NoneType' object has no attribute 'startswith'
