@@ -18,7 +18,7 @@ class I18nAuto:
         if not os.path.exists(f"./i18n/locale/{language}.json"):
             language = "zh_CN"
         self.language = "zh_CN"
-        #self.language = language
+        # self.language = language
         self.language_map = load_language_list(language)
 
     def __call__(self, key):
